@@ -16,7 +16,7 @@
 	<mvc:annotation-driven/>
 	<!-- maria 데이터 베이스 연결 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driverClass" value="oracle.mariadb.jdbc.Driver"/> 
+		<property name="driverClass" value="org.mariadb.jdbc.Driver"/> 
 		<property name="url" value="jdbc:mariadb://localhost:3306/NETFLIX" /> 
 		<property name="username" value="netflix"/> 
 		<property name="password" value="netflix"/> 

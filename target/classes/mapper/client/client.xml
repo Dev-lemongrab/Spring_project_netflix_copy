@@ -4,7 +4,7 @@
 
 
 
-<mapper namespace="client">
+<mapper namespace="Client">
 	<!-- 아이디 검색 -->
 	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
 		select * from client where email = #{email}
@@ -15,7 +15,7 @@
 		insert into client (email, password) values(#{email}, #{password})
 	</insert>
 	<update id="InsertMembership" parameterType="ClientVO">
-		update client set membership=#{membership}, membership_chk=#{membership_chk}, membership_date=sysdate, name=#{name},
+		update client set membership=#{membership}, membership_chk=#{membership_chk}, membership_date=sysdate(), name=#{name},
 		cardNum=#{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay}
 		where email=#{email}
 	</update>

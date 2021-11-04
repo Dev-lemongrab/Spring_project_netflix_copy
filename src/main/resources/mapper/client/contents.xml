@@ -7,7 +7,7 @@
 <mapper namespace="Contents">
 	
 	<select id="SelectAll" resultType="ContentsVO">
-		select * from content order by ROWNUM
+		select * from content order by content_id
 	</select>
 	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
 		select * from client where email = #{email}
