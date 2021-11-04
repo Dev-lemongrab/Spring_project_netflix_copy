@@ -4,62 +4,62 @@
 
 
 
-<mapper namespace="Client">
+<mapper namespace="client">
 	<!-- 아이디 검색 -->
 	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
-		select * from "client" where email = #{email}
+		select * from client where email = #{email}
 	</select>
 	
 	<!-- 회원가입 -->
 	<insert id="InsertNoMembership" parameterType="ClientVO">
-		insert into "client" (email, password) values(#{email}, #{password})
+		insert into client (email, password) values(#{email}, #{password})
 	</insert>
 	<update id="InsertMembership" parameterType="ClientVO">
-		update "client" set membership=#{membership}, membership_chk=#{membership_chk}, membership_date=sysdate, name=#{name},
+		update client set membership=#{membership}, membership_chk=#{membership_chk}, membership_date=sysdate, name=#{name},
 		cardNum=#{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay}
 		where email=#{email}
 	</update>
 	
 	<!-- 비번바꾸기 -->
 	<update id="ChangePassword" parameterType="Modify">
-	  	update "client" SET password = #{newPassword} where email = #{email}
+	  	update client SET password = #{newPassword} where email = #{email}
 	</update>
 	<!-- 멤버쉽 불러오기 -->
 	<select id="LoadMembership" parameterType="String" resultType="String">
-		select membership from "client" where email = #{email}	
+		select membership from client where email = #{email}	
 	</select>
 	
 	<update id="ChangeMembership" parameterType="ClientVO">
-		update "client" SET membership = #{membership} where email = #{email}
+		update client SET membership = #{membership} where email = #{email}
 	</update>
 	
 	
 	<update id="ModifyBillindDate" parameterType="ClientVO">
-		update "client"  SET membership_date = #{membership_date} where email = #{email}
+		update client  SET membership_date = #{membership_date} where email = #{email}
 	</update>
 	
 	<update id="ChangePaymentInfo" parameterType="ClientPaymentVO">
-		update "client" SET name=#{name}, cardnum = #{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay} where email=#{email} 
+		update client SET name=#{name}, cardnum = #{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay} where email=#{email} 
 	</update>
 	<!-- 멤버쉽가격 불러오기 -->
 	<select id="MembershipPrice" parameterType="String" resultType="MembershipVO">
-		select * from ticket where ticket_name = (select membership from "client" where email =#{email})
+		select * from ticket where ticket_name = (select membership from client where email =#{email})
 	</select>
 	<!-- 다음달 결제일 불러오기 -->
 	<select id="NextMonth" parameterType="String" resultType="String">
-		select to_char(add_months(membership_date,1),'yyyy-mm-dd') from "client" where email = #{email}
+		select to_char(add_months(membership_date,1),'yyyy-mm-dd') from client where email = #{email}
 	</select>
 	<!-- 휴대폰번호 업데이트 -->
 	<update id="PhoneChange" parameterType="PhoneChangeVO">
-		update "client" set phone = #{newPhone} where email=#{email}
+		update client set phone = #{newPhone} where email=#{email}
 	</update>	
 	<!--  이메일 업데이트 -->
 	<update id="EmailChange" parameterType="ChangeEmailVO">
-		update "client" set email=#{newEmail} where email=#{currenEmail}
+		update client set email=#{newEmail} where email=#{currenEmail}
 	</update>
 	<!-- 멤버쉽 해지 -->
 	<update id="DeleteMembership" parameterType="String">
-		update "client" set membership=null, membership_chk=null, membership_date=null, cardnum=null, expiredate=null where email=#{email}
+		update client set membership=null, membership_chk=null, membership_date=null, cardnum=null, expiredate=null where email=#{email}
 	</update>
 	<!--프로필 리스트 -->
 	<select id="getProfileList" parameterType="String" resultType="ProfileInfo">

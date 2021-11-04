@@ -14,17 +14,15 @@
 
 	
 	<mvc:annotation-driven/>
-	<!-- 데이터 베이스 연결 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
-	<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" /> 
-	<property name="username" value="netflix"/> 
-	<property name="password" value="netflix"/> 
-	</bean><!-- 수정 -->
+	<!-- maria 데이터 베이스 연결 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="oracle.mariadb.jdbc.Driver"/> 
+		<property name="url" value="jdbc:mariadb://localhost:3306/NETFLIX" /> 
+		<property name="username" value="netflix"/> 
+		<property name="password" value="netflix"/> 
+	</bean>
 	
 	<!-- SqlSessionFactory -->
-	<!-- 데이터베이스를 객체로 받아서 연결해서 사용하겠다!
-			마이바티스 사용하기 위한 필수 객체!!  -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:/mybatis-config.xml" /> <!-- 환경설정 파일 -->
