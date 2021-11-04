@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    color: #fff;
+}
+
+.profile-container{
+    text-align: left;
+    width: 800px;
+    margin: 0 auto;
+}
+.profile-container h1{
+    font-size: 4vw;
+}
+.profile-entry{
+    display: flex;
+    border-top :1px solid #333;
+    border-bottom :1px solid #333;
+    padding: 2em 0;
+}
+.left-entry{
+    width: 8vw;
+    margin-right: 1.5vw;
+    white-space: nowrap;
+}
+.left-entry .profile_img_box{
+    width: 100%;
+}
+.left-entry .profile_img_box img{
+    width: 100%;
+}
+.right-entry{
+    width: 600px;
+}
+.inputs-edit label{
+    display: inline;
+}
+input[type=text]{
+    width: 18em;
+    height: 2em;
+    background: #666;
+    border: 1px solid transparent;
+    margin: 0 .8em 0 0;
+    box-sizing: border-box;
+    color: #fff;
+    padding: .2em .6em;
+    font-size: 1.3vw;
+}
+
+.entry-header{
+    font-size: 1.3vw;
+    margin-bottom: 7px;
+    color: #ccc;
+}
+
+select{
+    height: 2.5rem;
+    padding-left: 10px;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,.9);
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+}
+.entry-restrictions{
+    border-top :1px solid #333;
+    margin: 1.5vw 0 0 0;
+    padding: 1.5vw 0 0 0;
+    font-size: 1vw;
+}
+.entry-level{
+    width: 150px;
+    text-align: center;
+    background: #333;
+    padding: 7px 10px;
+    font-weight: 700;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+.entry-level-info{
+    font-size: 1vw;
+}
+.autoplay-entry{
+    border-top :1px solid #333;
+    margin: 1.5vw 0 0 0;
+    padding: 1.5vw 0 0 0;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type=checkbox]+label{
+    border: 1px solid #333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    margin-right: .5em;
+    font-size: .8vw;
+    width: 2.5em;
+    height: 2.5em;
+}
+input[type=checkbox]:checked+label{
+    border: 1px solid #333;
+    color: #99a1a7;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    font-size: 0.8vw;
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 0.5em;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background: url(../../resources/images/check.png);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;
+    height: 2.5em;
+    display:inline-block;
+}
+.autoplay-option{
+    align-items: center;
+    display: flex;
+}
+.autoplay-option > span{
+    font-size: 0.8vw;
+}
+.profiles-btn{
+    display: inline-block;
+    font-weight: 700;
+    margin: 2em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    padding: .5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.profiles-save{
+    margin-right: 20px;
+    background: #fff;
+    color: #131313;
+    
+}
+.profiles-save:hover{
+    background: #c00;
+    border: 1px solid #c00;
+    color: #fff;
+}
+.profiles-cancel:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #131313;
+	color: #fff;
+}
+
+li, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+}
+
+#section1 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.profiles_container {
+	width: 80%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 100px;
+}
+.profile_wrapper{
+	position: relative;
+}
+.choose_list>li {
+	display: inline-block;
+	margin: 0 2vw 0 0;
+}
+
+.profiles_container .profile_hr {
+	font-size: 3vw;
+}
+
+.profiles_icon {
+	height: 10vw;
+	width: 10vw;
+	max-height: 200px;
+	max-width: 200px;
+	min-height: 84px;
+	min-width: 84px;
+	background-image:
+		url('https://occ-0-395-325.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTYctxxbe-UkKEdlMxXm4FVGD6DqTHkQ0TQ5CQJ9jbOMnG0CYxYcSICcTUQz8DrB7CpKUGpqJVMtEqksLlvSJx2ac3Ak.png?r=a41');
+	background-size: cover;
+	background-color: #333;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+.choose_list li:nth-child(2) .profiles_icon {
+	background-image:
+		url('https://occ-0-395-325.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABWu33TcylnaLZwSdtgKR6mr0O63afqQLxZbzHYQZLkCJ9bgMTtsf6tzs_ua2BuTpAVPbhxnroiEA-_bqJmKWiXblO9h-.png?r=f71')
+}
+
+.choose_list li:nth-child(3) .profiles_icon {
+	background-image:
+		url('https://occ-0-395-325.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABeUqbfriC_pGWtwTa1KOx-ZSiQYa7ltLkOuduGxY_GRRc41ugYJNGYHe4LNcmshST4qkRSENvcs2xFomPc0rtX8wq2NG.png?r=b97')
+}
+
+.choose_list li:nth-child(4) .profiles_icon {
+	background-image:
+		url('https://occ-0-395-325.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABX_cjFqekMWlVv9AS6vI54p7W5uxkdnDz0RZ_BWg2XRBOMNYXnJRhtOnpMappsaT2-4TP8mjyaBTNLX-mLEJHl8GIfn_.png?r=fcc')
+}
+
+.choose_list li:last-child .profiles_icon:before {
+	content: '\e716';
+	/* background-image:url('https://occ-0-395-325.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV5QMl3XdlLGk7lVqErjXtqQUV9RDRhGn4YZzKk2XPtqMJbmE6UMzGRPTeDeUpETn6V3XocrWHYZvp4a6CwYFr7Oi3cZ.png?r=acf') */
+}
+
+.profiles_name {
+	color: grey;
+	display: block;
+	font-size: 1.3vw;
+	margin-top: 10px;
+}
+
+.profiles_edit_btn {
+	margin-top: 60px;
+	color: grey;
+	padding: 10px 15px;
+	background-color: #131313;
+	border: 1px solid grey;
+	font-size: 1.2vw;
+}
+
+.profiles_edit_btn:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.profiles_complate_btn {
+	margin-top: 60px;
+	color: #000;
+	font-weight: 800;
+	padding: 10px 25px;
+	background-color: #fff;
+	font-size: 1.2vw;
+}
+.profiles_complate_btn:hover{
+	background-color:#c00;
+	color: #fff;
+}
+.choose_list li:hover .profiles_icon {
+	border: 3px solid #fff;
+}
+
+.choose_list li:hover .profiles_name {
+	color: #fff;
+}
+
+.edit_icon{
+	position:absolute;
+	top:43%;
+	left:50%;
+	opacity:1;
+	transform: translate(-50%,-50%);
+	border:2px solid #fff;
+	border-radius:50%;
+	padding:6px;
+	
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+
+<mapper namespace="Contents">
+	
+	<select id="SelectAll" resultType="ContentsVO">
+		select * from content order by ROWNUM
+	</select>
+	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
+		select * from "client" where email = #{email}
+	</select>
+	<!-- 찜한 콘텐츠불러오기 아이디 닉넴에 따라 -->
+	
+	<select id="SelectWish" parameterType="WishAndLikeVO" resultType="WishAndLikeVO">
+		select * from wishandlike where email=#{email} and row_num=#{row_num}
+	</select>
+	<!-- 좋아요 싫어요 찜 했는지 검색 -->
+	<select id="SelectWishAndLike" parameterType="WishAndLikeVO" resultType="WishAndLikeVO" >
+		select * from wishandlike where email=#{email} and content_id=#{content_id} and row_num=#{row_num}
+	</select>
+	<!-- 찜 업데이트 -->
+	<update id="UpdateWish" parameterType="WishAndLikeVO">
+		update wishandlike set wish='true', wish_date=#{wish_date} where email=#{email} and content_id=#{content_id} and row_num=#{row_num}
+	</update>
+	<!-- 찜 인서트 -->
+	<insert id="InsertWish" parameterType="WishAndLikeVO">
+		insert into wishandlike 
+		values(#{content_id}, #{content_title}, #{email}, #{row_num}, #{wish}, #{like}, #{dislike}, #{wish_date}, #{like_date}, #{dislike_date})
+	</insert>
+	<!-- 좋아요 업데이트 -->
+	<update id="UpdateLike" parameterType="WishAndLikeVO">
+		update wishandlike set "LIKE"='true', dislike=null, like_date=#{like_date}, dislike_date=null where email=#{email} and content_id=#{content_id} and row_num=#{row_num}
+	</update>
+	<!-- 좋아요 인서트 -->
+	<insert id="InsertLike" parameterType="WishAndLikeVO">
+		insert into wishandlike 
+		values(#{content_id}, #{content_title}, #{email}, #{row_num}, #{wish}, #{like}, null, #{wish_date}, #{like_date}, #{dislike_date})
+	</insert>
+	<!-- 싫어요 업데이트 -->
+	<update id="UpdateDislike" parameterType="WishAndLikeVO">
+		update wishandlike set "LIKE"=null, dislike='true', like_date=null, dislike_date=#{dislike_date} where email=#{email} and content_id=#{content_id} and row_num=#{row_num}
+	</update>
+	<!-- 싫어요 인서트 -->
+	<insert id="InsertDislike" parameterType="WishAndLikeVO">
+		insert into wishandlike 
+		values(#{content_id}, #{content_title}, #{email}, #{row_num}, #{wish}, null, #{dislike}, #{wish_date}, #{like_date}, #{dislike_date})
+	</insert>
+	
+	<!-- 시청기록 불러오기 -->
+	<select id="ViewedList" parameterType="ViewedVO" resultType="ViewedVO">
+		select * from viewed where email = #{email} and row_num = #{row_num}
+	</select>
+	
+	<!-- 시청기록 등록하기 -->
+	<insert id="InsertView" parameterType="ViewedVO">
+		insert into viewed values(#{content_id}, #{content_name}, #{row_num}, #{email}, #{view_date})
+	</insert>
+	
+
+</mapper>

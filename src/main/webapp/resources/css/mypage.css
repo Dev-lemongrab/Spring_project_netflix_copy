@@ -1,0 +1,730 @@
+.head {
+	width: 100%;
+	height: 68px;
+	background: rgb(0, 0, 0);
+}
+
+.head_div {
+	width: 90%;
+	margin: auto;
+	padding-top: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.rogo {
+	font-size: 36px;
+	color: red;
+	font-weight: 600;
+}
+
+.main {
+	width: 55%;
+	margin: auto;
+	padding-top: 100px;
+}
+
+.main_top {
+	height: 70px;
+}
+
+.main_text {
+	align-items: center;
+	font-size: 38px;
+	font-weight: 100;
+	padding-right: 10px;
+}
+
+#membership_text {
+	font-size: 13px;
+	font-weight: 600;
+	color: #5f5e5e;
+}
+
+.row {
+	display: flex;
+}
+
+.content_div {
+	padding-top: 14px;
+	width: 260px;
+}
+
+.title1 {
+	font-size: 18px;
+	color: #757575;
+}
+
+.title1_btn {
+	width: 200px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	background: #f0ecec;
+	box-shadow: 0 1px 0px rgba(0, 0, 0, 0.041), 0 3px 10px
+		rgba(0, 0, 0, 0.082);
+	cursor: pointer;
+}
+
+.title1_btn:hover {
+	background: #f1efef;
+}
+
+.content_all {
+	line-height: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(17, 17, 17, 0.192);
+	width: 780px;
+}
+
+.content_all2 {
+	line-height: 30px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	width: 780px;
+}
+
+.text_all {
+	justify-content: space-between;
+	display: flex;
+}
+
+.text_all>a {
+	color: #4e86ed;
+}
+
+.membership-info {
+	text-transform: uppercase;
+}
+
+#font_weight {
+	font-weight: 600;
+}
+
+.text_all>a:hover {
+	text-decoration: underline;
+}
+
+.content3 {
+	display: flex;
+	height: 100px;
+	padding-top: 15px;
+}
+
+.content3 img {
+	height: 60px;
+}
+
+.user_text>p {
+	font-size: 13px;
+	color: #868585;
+}
+
+.user_all>img {
+	padding-right: 20px;
+}
+
+.user_content1, .user_content2, .user_content3, .user_content4 {
+	cursor: pointer;
+}
+
+#down_btn {
+	height: 20px;
+	margin-top: 20px;
+	padding-left: 580px;
+}
+
+.margin {
+	height: 80px;
+}
+
+footer {
+	border-top: 1px solid rgba(209, 207, 207, 0.363);
+}
+
+.footer_div {
+	padding-top: 25px;
+	width: 90%;
+	margin: auto;
+}
+
+.footer_link {
+	line-height: 30px;
+	display: flex;
+}
+
+.link_1 {
+	padding-top: 30px;
+	width: 250px;
+	font-size: 14px;
+}
+
+.footer_text {
+	padding-top: 15px;
+	font-size: 12px;
+}
+
+#service_code {
+	width: 110px;
+	height: 40px;
+	border-radius: 0%;
+	border: 1px solid rgb(49, 49, 49);
+	background: none;
+	margin-top: 50px;
+}
+
+.link_1>p:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.footer_div>p:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.click_div1 {
+	display: none;
+}
+
+.click_div2 {
+	display: none;
+}
+
+.click_div3 {
+	display: none;
+}
+
+.click_div4 {
+	display: none;
+}
+
+.data {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 75px;
+	height: 80px;
+	border-bottom: 1px solid rgba(17, 17, 17, 0.192);
+	padding-top: 25px;
+}
+
+.data_1>p {
+	font-size: 13px;
+	padding-top: 3px;
+	color: #757575;
+}
+
+.data>a {
+	color: #4e86ed;
+	font-size: 13px;
+}
+
+.data>a:hover {
+	text-decoration: underline;
+}
+
+/*비밀번호 변경 페이지(pawChange.jsp) css*/
+.pwcontainer {
+	width: 100%;
+	background: #f3f3f3;
+}
+.email_div {
+    margin: auto 0;
+    margin-left: 22%;
+    width: 700px;
+    height: 550px;
+    padding-top: 100px;
+}
+.pw_div {
+	margin: auto 0;
+	margin-left: 22%;
+	width: 700px;
+	height: 750px;
+	padding-top: 100px;
+}
+
+.form-div>form>p {
+	padding-top: 45px;
+	font-size: 35px;
+	padding-bottom: 20px;
+}
+
+.hastext {
+	width: 510px;
+	height: 60px;
+	opacity: 1;
+	line-height: normal; /* line-height 초기화 */
+	padding: 10px 10px 0px;
+	font-family: inherit; /* 폰트 상속 */
+	border: 1px solid #999;
+	border-radius: 0; /* iSO 둥근모서리 제거 */
+	outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
+	-webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */
+	-moz-appearance: none;
+	appearance: none;
+	position: re
+}
+
+.textbox1 {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.placeLabel {
+	position: absolute;
+	padding-left: 7px;
+	color: #999;
+	cursor: text;
+}
+
+.pl1 {
+	/* 	top: 80px; */
+	left: 22%;
+	transition: 0.3s;
+}
+
+.pl2 {
+	top: 280px;
+	left: 22%;
+	transition: 0.3s;
+}
+
+.pl3 {
+	top: 380px;
+	left: 22%;s
+	transition: 0.3s;
+}
+
+#pwtext {
+	font-size: 13px;
+	color: #4e86ed;
+	cursor: pointer;
+}
+
+#pwtext:hover {
+	text-decoration: underline;
+}
+
+#pwck {
+	display: none;
+	position: absolute;
+	top: 315px;
+	font-size: 12px;
+	color: red;
+}
+
+#pwck2 {
+	display: none;
+	position: absolute;
+	top: 405px;
+	font-size: 12px;
+	color: #5fa53f;
+}
+
+.pw_remember {
+	padding-bottom: 40px;
+}
+
+.pw_checkbox {
+	margin-right: 10px;
+	padding: 0px;
+	width: 25px;
+	height: 25px;
+}
+
+.pw_btn {
+	width: 98px;
+	height: 40px;
+	border: 1px solid rgba(128, 128, 128, 0.226);
+	border-radius: 2px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.pw_btn1 {
+	color: white;
+	background-color: #0f84fa;
+}
+
+.pw_btn1:hover {
+	background-color: #3193f5;
+}
+
+.pw_btn2:hover {
+	background-color: #dfd9d9ee;
+}
+
+.pw_btn2 {
+	background-color: #ccccccee;
+}
+
+/*결제 상세 정보 페이지(payment_details.jsp) css*/
+* {
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	color: rgb(5, 5, 5);
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.head {
+	width: 100%;
+	height: 68px;
+	background: rgb(0, 0, 0);
+}
+
+.paydecontainer {
+	width: 100%;
+	height: 600px;
+	background: #f3f3f3;
+}
+
+.pay_div {
+	margin: auto;
+	margin-left: 22%;
+	width: 700px;
+	padding-top: 100px;
+}
+
+.pay_div>p {
+	padding-top: 45px;
+	font-size: 35px;
+	padding-bottom: 20px;
+}
+
+#membership_text1 {
+	font-size: 14px;
+	color: #979494;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+#membership_text2 {
+	font-size: 14px;
+	color: #979494;
+	font-weight: 100;
+}
+
+#my_membership {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.membership {
+	line-height: 22px;
+	width: 1000px;
+	height: 160px;
+	background: white;
+	border: 1px solid rgba(128, 128, 128, 0.514);
+	padding: 15px 10px;
+}
+
+#membership_text3 {
+	font-size: 12px;
+	color: #5c5a5a;
+	padding-top: 3px;
+}
+
+.pay_table_div {
+	margin: auto;
+	margin-left: 22%;
+	width: 700px;
+	padding-bottom: 100px;
+}
+
+.pay_table {
+	width: 1020px;
+}
+
+.table_top>th {
+	font-size: 14px;
+	color: #858080;
+	font-weight: 100;
+	padding-top: 20px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgb(199, 196, 196);
+}
+
+.table_content {
+	font-size: 14px;
+}
+
+.top1 {
+	text-align: left;
+}
+
+.top2 {
+	text-align: left;
+}
+
+.top3 {
+	text-align: left;
+}
+
+.top4 {
+	text-align: left;
+}
+
+.top5 {
+	text-align: right;
+}
+
+.top6 {
+	text-align: right;
+}
+
+#surtax {
+	color: #868585;
+}
+
+.content5, .content6 {
+	text-align: right;
+}
+
+.table_text1 {
+	color: #0f84fa;
+	font-weight: 500;
+}
+
+/*멤버십 변경 페이지(changeplan.jsp) */
+.plancontainer {
+	width: 100%;
+	height: 850px;
+	background: #f3f3f3;
+}
+
+.plan_div {
+	margin: auto;
+	margin-left: 22%;
+	width: 1044px;
+	padding-top:100px;
+}
+
+.plan_div>p {
+	padding-top: 45px;
+	font-size: 35px;
+	padding-bottom: 20px;
+}
+
+.list {
+	width: 1044px;
+	height: 380px;
+}
+
+.list_item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 18px;
+	width: 1040px;
+	height: 110px;
+	border: 4px solid #cccccc;
+}
+
+.selection_header {
+	width: 15%;
+	text-align: center;
+	line-height: 110px;
+	background: #f3f3f3;
+}
+
+.selection_body {
+	width: 72%;
+	line-height: 110px;
+	padding-left: 18px;
+	background: white;
+}
+
+.selection_price {
+	width: 13%;
+	line-height: 110px;
+	font-size: 19px;
+	background: white;
+}
+
+.plan_div>span {
+	font-size: 12px;
+	width: 1044px;
+	line-height: 20px;
+}
+
+.data3 {
+	color: #0f84fa;
+}
+
+.data3:hover {
+	text-decoration: underline;
+}
+
+.list_btn {
+	text-align: center;
+	padding-top: 13px;
+}
+
+.listbtn {
+	width: auto;
+	padding: 16px 16px;
+	height: 40px;
+	margin-right: 2px;
+	line-height: 5px;
+}
+
+.listbtn1 {
+	background: #027af2;
+	border: none;
+	color: white;
+}
+
+.listbtn2 {
+	background: #e1e1e1;
+	border: none;
+}
+
+/* 마우스 click,hover 이벤트시 추가될 클래스*/
+.list_select_item {
+	background: #cccccc;
+	color: #027af2;
+	font-weight: 600;
+}
+
+.list_select {
+	border-color: #027af2;
+}
+
+.list_item:hover {
+	border-color: #027af2;
+	cursor: pointer;
+}
+
+.check_img {
+	position: absolute;
+	margin: 35px -20px;
+}
+
+/*시청기록 페이지(viewed.jsp)*/
+.viewcontainer {
+	width: 100%;
+	height: auto;
+	background: #f3f3f3;
+}
+
+.view_div {
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	margin-left: 22%;
+	width: 1044px;
+}
+
+.view_div>p {
+	padding-top: 45px;
+	font-size: 35px;
+	padding-bottom: 35px;
+}
+
+.view_top_right {
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+ul.tabs {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ul.tabs li {
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current {
+	color: #027af2;
+}
+
+ul.tabs li.current:hover {
+	text-decoration: underline;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-content.current {
+	display: inherit;
+}
+
+#top_img {
+	
+}
+
+.view_content {
+	border-top: 1px solid rgba(175, 174, 174, 0.466);
+	margin: auto;
+	margin-left: 22%;
+	width: 1044px;
+}
+
+.tab_row {
+	display: flex;
+	line-height: 50px;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid rgba(175, 174, 174, 0.466);
+}
+
+.row_date {
+	width: 10%;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.row_title {
+	width: 77%;
+	color: #027af2;
+}
+
+.row_title:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.row_report:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.row_report {
+	font-size: 15px;
+	width: 10%;
+}
+
+.row_deleteBtn {
+	text-align: right;
+	width: 5%;
+}
+
+#delete_text {
+	display: none;
+}
+
+.row_bottom {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 100px;
+}
+
+#bar {
+	color: #85808091;
+}
+
+.icon {
+	padding-top: 12px;
+	cursor: pointer;
+}

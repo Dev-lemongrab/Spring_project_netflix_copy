@@ -1,0 +1,155 @@
+/*�ʱ�ȭ*/
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
+li, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+}
+
+/*�������*/
+header {
+	top: 0;
+	background: transparent;
+}
+
+.header_container {
+	display: flex;
+	align-items: center;
+}
+
+.logo, .main_nav, .sub_nav {
+	flex: 0 0 auto; /* flex: none */
+}
+
+.main_nav {
+	display: flex;
+	align-items: center;
+}
+
+.main_nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.main_nav a:hover {
+	opacity: 0.8;
+}
+
+.sub_nav {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	font-size: 1.2rem;
+	margin-right: 2%;
+}
+
+.sub_nav li:nth-child(5) {
+	position: relative;
+}
+
+.sub_nav_user_tab {
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 160px;
+	opacity: 0.9;
+	font-weight: 700;
+	background-color: #000;
+}
+
+.user_sec1 {
+	padding: 15px 0;
+	border-bottom: 1px solid #fff;
+}
+.user_sec1 span{
+	color:#fff;
+}
+.sub_nav_user_tab ul li {
+	padding: 5px 10px;
+}
+
+.sub_nav_user_tab ul li:hover a {
+	text-decoration: underline;
+}
+
+.sub_nav_user_tab ul li:hover div span {
+	text-decoration: underline;
+}
+
+.sub_nav_user_tab ul li a {
+	color: #fff;
+	font-size: 0.8rem;
+	text-decoration: none;
+}
+
+sub_nav_user_tab ul li div {
+	display: flex;
+}
+
+.sub_nav_user_tab ul li div span {
+	font-size: 0.8rem;
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 32px;
+	padding: 0 0 0 10px;
+}
+
+.header_container {
+	width: 100%;
+	/* fixed nav-bar */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	color: #ddddff;
+	font-size: 0.9rem;
+}
+
+.logo {
+	padding-left: 1rem;
+	text-decoration: none;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 3rem;
+}
+
+.logo a img {
+	height: 1em;
+}
+
+.logo .header_toggleBtn {
+	display: none;
+}
+
+.main_nav .main_nav_tab {
+	padding-left: 1rem;
+}
+
+.sub_nav .sub_nav_tab {
+	padding-right: 1rem;
+}
+
+.hide_menu {
+	display: none;
+}

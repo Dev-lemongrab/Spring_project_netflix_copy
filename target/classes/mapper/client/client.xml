@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+
+<mapper namespace="Client">
+	<!-- 아이디 검색 -->
+	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
+		select * from "client" where email = #{email}
+	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="InsertNoMembership" parameterType="ClientVO">
+		insert into "client" (email, password) values(#{email}, #{password})
+	</insert>
+	<update id="InsertMembership" parameterType="ClientVO">
+		update "client" set membership=#{membership}, membership_chk=#{membership_chk}, membership_date=sysdate, name=#{name},
+		cardNum=#{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay}
+		where email=#{email}
+	</update>
+	
+	<!-- 비번바꾸기 -->
+	<update id="ChangePassword" parameterType="Modify">
+	  	update "client" SET password = #{newPassword} where email = #{email}
+	</update>
+	<!-- 멤버쉽 불러오기 -->
+	<select id="LoadMembership" parameterType="String" resultType="String">
+		select membership from "client" where email = #{email}	
+	</select>
+	
+	<update id="ChangeMembership" parameterType="ClientVO">
+		update "client" SET membership = #{membership} where email = #{email}
+	</update>
+	
+	
+	<update id="ModifyBillindDate" parameterType="ClientVO">
+		update "client"  SET membership_date = #{membership_date} where email = #{email}
+	</update>
+	
+	<update id="ChangePaymentInfo" parameterType="ClientPaymentVO">
+		update "client" SET name=#{name}, cardnum = #{cardNum}, expiredate=#{expireDate}, birthyear=#{birthYear}, birthmonth=#{birthMonth}, birthday=#{birthDay} where email=#{email} 
+	</update>
+	<!-- 멤버쉽가격 불러오기 -->
+	<select id="MembershipPrice" parameterType="String" resultType="MembershipVO">
+		select * from ticket where ticket_name = (select membership from "client" where email =#{email})
+	</select>
+	<!-- 다음달 결제일 불러오기 -->
+	<select id="NextMonth" parameterType="String" resultType="String">
+		select to_char(add_months(membership_date,1),'yyyy-mm-dd') from "client" where email = #{email}
+	</select>
+	<!-- 휴대폰번호 업데이트 -->
+	<update id="PhoneChange" parameterType="PhoneChangeVO">
+		update "client" set phone = #{newPhone} where email=#{email}
+	</update>	
+	<!--  이메일 업데이트 -->
+	<update id="EmailChange" parameterType="ChangeEmailVO">
+		update "client" set email=#{newEmail} where email=#{currenEmail}
+	</update>
+	<!-- 멤버쉽 해지 -->
+	<update id="DeleteMembership" parameterType="String">
+		update "client" set membership=null, membership_chk=null, membership_date=null, cardnum=null, expiredate=null where email=#{email}
+	</update>
+	<!--프로필 리스트 -->
+	<select id="getProfileList" parameterType="String" resultType="ProfileInfo">
+	   	select * from profile where email = #{email} order by 1
+	</select>
+	<!-- 프로필 선택 -->
+	<select id="getProfile" parameterType="ProfileInfo" resultType="ProfileInfo">
+	   	select * from profile where email=#{email} and row_num=#{row_num}
+	</select>
+	
+	<!-- 프로필 추가-->
+	<insert id ="InsertProfile" parameterType="ProfileInfo">
+		insert into profile values(#{row_num}, #{profile_name}, #{email}, 'korean', 'true', 'true')
+	</insert>
+	
+	<!-- 프로필 업뎃 -->
+	<update id="UpdateProfile" parameterType="ProfileInfo">
+		update profile 
+		set profile_name=#{profile_name}, language=#{language}, preview_ap=#{preview_ap}, series_ap=#{series_ap}
+		where row_num=#{row_num} and email=#{email}
+	</update>
+	
+	<!-- 프로필삭제 -->
+	<delete id="DeleteProfile" parameterType="String">
+		delete from profile where email=#{email}
+	</delete>
+	<!-- 찜좋아요싫어요 멤버쉽변경 혹은 해지시 삭제 --> 
+	<delete id="DeleteWishLike" parameterType="String">
+		delete from wishandlike where email=#{email}
+	</delete>
+	
+	<!-- <select id="monthlyMember" resultMap="monthlyCount">
+		select count(*) as "count", to_char(regdate, 'mm') as "month" from "monthlymember"
+		group by to_char(regdate, 'mm') order by 2
+	</select>	
+	<resultMap type="map" id="monthlyCount">
+		<result column="month" property="mon_th"/>
+		<result column="count" property="coun_t"/>
+	</resultMap> -->
+</mapper>

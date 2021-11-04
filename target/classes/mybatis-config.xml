@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+<settings>
+<setting name="cacheEnabled" value="false"/>
+<setting name="jdbcTypeForNull" value="NULL"/>
+</settings>
+
+	<typeAliases>
+	
+		<typeAlias alias="AdminMemberVO" 
+		type="com.mgr.netflix.admin.member.vo.AdminMemberVO"/>		
+		<typeAlias alias="AdminManagerVO" 
+		type="com.mgr.netflix.admin.manager.vo.AdminManagerVO"/>
+		<typeAlias alias="AdminTicketVO" 
+		type="com.mgr.netflix.admin.ticket.vo.AdminTicketVO"/>
+		<typeAlias alias="AdminActorVO" 
+		type="com.mgr.netflix.admin.actor.vo.AdminActorVO"/>
+		<typeAlias alias="AdminCategoryVO" 
+		type="com.mgr.netflix.admin.category.vo.AdminCategoryVO"/>
+		<typeAlias alias="AdminDirectorVO" 
+		type="com.mgr.netflix.admin.director.vo.AdminDirectorVO"/>
+		<typeAlias alias="AdminGenreVO" 
+		type="com.mgr.netflix.admin.genre.vo.AdminGenreVO"/>
+		<typeAlias alias="AdminContentVO" 
+		type="com.mgr.netflix.admin.content.vo.AdminContentVO"/>		
+				
+				
+		
+		<typeAlias alias="ClientVO" 
+		type="com.mgr.netflix.client.vo.ClientVO"/>
+				
+		<typeAlias alias="Modify"
+		type="com.mgr.netflix.client.vo.ModifyClientVO"/>
+		
+		<typeAlias alias="ClientPaymentVO"
+		type="com.mgr.netflix.client.vo.ClientPaymentVO"/>	
+		
+		<typeAlias alias="MembershipVO"
+		type="com.mgr.netflix.client.vo.MembershipVO"/>	
+		
+		<typeAlias alias="ContentsVO"
+		type="com.mgr.netflix.contents.vo.ContentsVO"/>	
+		
+		<typeAlias alias="PhoneChangeVO"
+		type="com.mgr.netflix.client.vo.PhoneChangeVO"/>	
+		
+		<typeAlias alias="ChangeEmailVO"
+		type="com.mgr.netflix.client.vo.ChangeEmailVO"/>	
+
+		<typeAlias alias="ProfileInfo"
+		type="com.mgr.netflix.client.vo.ProfileInfo"/>	
+		
+		<typeAlias alias="WishAndLikeVO"
+		type="com.mgr.netflix.contents.vo.WishAndLikeVO"/>	
+			
+		
+		<typeAlias alias="ViewedVO"
+		type="com.mgr.netflix.contents.vo.ViewedVO"/>	
+			
+	
+	</typeAliases>
+	
+<mappers>
+		<mapper resource="mapper/admin/member.xml"></mapper>
+		<mapper resource="mapper/admin/manager.xml"></mapper>
+		<mapper resource="mapper/admin/ticket.xml"></mapper>
+		<mapper resource="mapper/admin/category.xml"></mapper>
+		<mapper resource="mapper/admin/actor.xml"></mapper>
+		<mapper resource="mapper/admin/director.xml"></mapper>
+		<mapper resource="mapper/admin/genre.xml"></mapper>			
+		<mapper resource="mapper/admin/content.xml"></mapper>			
+	<mapper resource="mapper/client/client.xml"></mapper>			
+	<mapper resource="mapper/client/contents.xml"></mapper>			
+</mappers>
+</configuration>
