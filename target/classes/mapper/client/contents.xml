@@ -7,10 +7,10 @@
 <mapper namespace="Contents">
 	
 	<select id="SelectAll" resultType="ContentsVO">
-		select * from content order by ROWNUM
+		select * from content order by content_id
 	</select>
 	<select id="SelectByEmail" parameterType="String" resultType="ClientVO">
-		select * from "client" where email = #{email}
+		select * from client where email = #{email}
 	</select>
 	<!-- 찜한 콘텐츠불러오기 아이디 닉넴에 따라 -->
 	

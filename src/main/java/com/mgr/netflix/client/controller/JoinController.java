@@ -88,6 +88,7 @@ public class JoinController {
 			AuthInfo authInfo = authService.authenticate(joinVO.getEmail(), joinVO.getPassword());//가입하자마자 바로 로그인됨
 			session.setAttribute("authInfo", authInfo);//세션등록, 멤버쉽 부분은 null인 상태기 때문에 멤버쉽 가입후에 다시 세션등록 
 		}catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("아이디중복!");//이미 있는 계정일 경우 오류를 던지도록 설계 JoinService참고
 			return "redirect:/join/step2.do";//step2로 보내는데 메세지를 띄워야한다.
 		}

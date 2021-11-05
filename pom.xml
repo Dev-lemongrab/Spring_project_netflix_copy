@@ -33,21 +33,36 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 		<!-- ==아래 2개와 ================================== -->
+		
+		<!--spring JDBC  -->
 		<dependency>
 		   <groupId>org.springframework</groupId>
 		   <artifactId>spring-jdbc</artifactId>
 		   <version>${org.springframework-version}</version>
 		</dependency>
-	
+		
+		<!-- DBCP 데이터베이스 풀커넥 -->
+		
 		<dependency>
 		    <groupId>commons-dbcp</groupId>
 		    <artifactId>commons-dbcp</artifactId>
 		    <version>1.4</version>
 		</dependency>
 		
+		<!-- MariaDB -->
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.0.3</version>
+		</dependency>
 		
-	  <!-- =====아래 2개 총 4개의 dependency  추가 ======== -->
-	   		<dependency>
+
+		
+		
+	  <!-- =====아래 2개 총 4개의 dependency  추가 ========
+	  		mybatis
+	   -->
+	   	<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
 		    <version>3.4.1</version>
