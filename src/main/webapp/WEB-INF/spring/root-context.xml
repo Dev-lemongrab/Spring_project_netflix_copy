@@ -17,9 +17,12 @@
 	<!-- maria 데이터 베이스 연결 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 		<property name="driverClass" value="org.mariadb.jdbc.Driver"/> 
-		<property name="url" value="jdbc:mariadb://localhost:3306/NETFLIX" /> 
-		<property name="username" value="netflix"/> 
-		<property name="password" value="netflix"/> 
+		<!-- 로컬에서 돌릴때 -->
+		<!--  <property name="url" value="jdbc:mariadb://kongoh9293.cafe24.com:3306/NETFLIX" /> -->
+		<!-- 호스팅서버에서 돌릴때 -->
+		<property name="url" value="jdbc:mariadb://localhost:3306/kongoh9293" />
+		<property name="username" value="kongoh9293"/> 
+		<property name="password" value="kooh9293@@"/> 
 	</bean>
 	
 	<!-- SqlSessionFactory -->
