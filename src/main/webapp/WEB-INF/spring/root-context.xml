@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	
 
-	
+
 	<mvc:annotation-driven/>
 	<!-- maria 데이터 베이스 연결 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
